@@ -1,0 +1,19 @@
+﻿@using XX.Data.Models
+@model dynamic
+
+@{
+    ViewBag.Title = "页面标题";
+    //Layout = "_Layout";
+    var testuserService = Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<XX.Services.ITestUserService>();
+    int totalCount =0;
+    List<testuser>list=testuserService.GetTestUserList("", 1, 10, out totalCount);
+}
+
+<h2>title</h2>
+total:@totalCount showResult:<br />
+<ul>
+    @foreach (var item in list)
+    {
+        <li>@(item.username)(@item.uid)</li>
+    }
+</ul>

@@ -1,0 +1,40 @@
+﻿@model Dev.Comm.Web.Mvc.Pager.Pagination
+@*分页页面模板*@
+@if (Model != null && Model.TotalPages > 1)
+{
+    <ul class="pagination   pagination-centered pagination-small">
+        @if (Model.CurrentPage != 1)
+            {
+            <li>@Html.ActionLink("首页", Model.Action, Model.Controller, Model.GetDictionary(1), null) </li>
+            <li>@Html.ActionLink("上一页", Model.Action, Model.Controller, Model.GetDictionary(Model.CurrentPage - 1), null)</li>
+            }
+        <li @(Model.CurrentPage == 1 ? "class=disabled" : "")>@Html.ActionLink("1", Model.Action, Model.Controller, Model.GetDictionary(1), null)</li>
+
+        @if (Model.Shorten && Model.CurrentPage > 5)
+            {
+            <li>@Html.ActionLink("...", Model.Action, Model.Controller, Model.GetDictionary(Model.CurrentPage - 3), null)</li>
+
+            }
+        @for (int i = Model.Start; i <= Model.Stop; i++)
+            {
+
+            <li @(Model.CurrentPage == i ? "class=disabled" : "")>@Html.ActionLink(i.ToString(), Model.Action, Model.Controller, Model.GetDictionary(i), null)</li>
+
+            }
+
+        @if (Model.Shorten && Model.CurrentPage <= (Model.TotalPages - 5))
+            {
+
+            <li>@Html.ActionLink("...", Model.Action, Model.Controller, Model.GetDictionary(Model.CurrentPage + 3), null)</li>
+
+            }
+        <li @(Model.CurrentPage == Model.TotalPages ? "class=disabled" : "")>@Html.ActionLink(Model.TotalPages.ToString(), Model.Action, Model.Controller, Model.GetDictionary(Model.TotalPages), null)</li>
+        @if (Model.CurrentPage != Model.TotalPages)
+            {
+            <li>
+                @Html.ActionLink("下一页", Model.Action, Model.Controller, Model.GetDictionary(Model.CurrentPage + 1), null)
+            </li>
+            <li>@Html.ActionLink("尾页", Model.Action, Model.Controller, Model.GetDictionary(Model.TotalPages), null)</li>
+            }
+    </ul>
+}

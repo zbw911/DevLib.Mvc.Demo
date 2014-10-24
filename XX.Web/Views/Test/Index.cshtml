@@ -1,0 +1,17 @@
+﻿@model List<XX.Data.Models.testuser>
+
+@{
+    ViewBag.Title = "title";
+    //Layout = "_Layout";
+  
+}
+
+<h2>title</h2>
+total:@ViewBag.totalCount result:<br />
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@(item.username)(@item.uid)</li>
+    }
+</ul>
+@{Html.RenderPartial("_Pagination", ViewBag.pager as Dev.Comm.Web.Mvc.Pager.Pagination);}

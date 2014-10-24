@@ -1,0 +1,13 @@
+﻿@model System.Collections.Generic.List<XX.Data.Models.testuser>
+
+@{
+    ViewBag.Title = "异步读取数据";
+    //Layout = "_Layout";
+}
+
+<h2>异步读取数据</h2>
+<h2>title</h2>
+@foreach (var admin in Model)
+{
+    <a> @admin.username  </a><a> @admin.uid  </a><br />
+}

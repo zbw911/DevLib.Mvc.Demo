@@ -1,0 +1,68 @@
+﻿@model XX.Data.Models.testuser
+
+@{
+    ViewBag.Title = "AddTestUser";
+}
+@section scripts{
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+        $("form").submit(
+            function() {
+                $.ajax({
+                    url: $(this).attr("action"),
+                    type: "POST",
+                    data: $(this).serialize(),
+                    dataType: "text",
+                    success: function(msg) {
+                        alert('操作提示:' + msg);
+                    },
+                    error: function(xmlHttpRequest, textStatus, errorThrown) {
+                        alert("错误提示:\r\n" + errorThrown + "\r\nstatus:" + xmlHttpRequest.status + "\r\nreadyState:" + xmlHttpRequest.readyState + "\r\ntextStatus:" + textStatus);
+                    }
+                });
+
+                return false;
+            }
+        );
+        $("#username").blur(function () {
+            $("#username").next().text("");
+            $("#username").next().hide();
+            if ($("#username").val() == "") {
+                $("#username").next().text("username不能为空");
+                $("#username").next().show();
+                $("#username").focus();
+                return false;
+            }
+        });
+    </script>
+}
+<h2>AddTestUser</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Admin</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.username, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

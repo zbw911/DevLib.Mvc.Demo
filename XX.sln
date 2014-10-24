@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "项目配置", "项目配置", "{446631B1-9CC1-46F5-A207-F5B7C091A749}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_LIB", "_LIB", "{D7854561-FA33-4496-8187-1E1772A7C0C3}"
+	ProjectSection(SolutionItems) = preProject
+		_LIB\CommonServiceLocator.NinjectAdapter.dll = _LIB\CommonServiceLocator.NinjectAdapter.dll
+		_LIB\Dev.Comm.Core.dll = _LIB\Dev.Comm.Core.dll
+		_LIB\Dev.Comm.Web.dll = _LIB\Dev.Comm.Web.dll
+		_LIB\Dev.Comm.Web.Mvc.dll = _LIB\Dev.Comm.Web.Mvc.dll
+		_LIB\Dev.Crosscutting.Adapter.dll = _LIB\Dev.Crosscutting.Adapter.dll
+		_LIB\Dev.Crosscutting.Adapter.NetFramework.dll = _LIB\Dev.Crosscutting.Adapter.NetFramework.dll
+		_LIB\Dev.Data.dll = _LIB\Dev.Data.dll
+		_LIB\Dev.Data.Infras.dll = _LIB\Dev.Data.Infras.dll
+		_LIB\Dev.DataContextStorage.dll = _LIB\Dev.DataContextStorage.dll
+		_LIB\Dev.FileServer.Factory.dll = _LIB\Dev.FileServer.Factory.dll
+		_LIB\Dev.Framework.Cache.dll = _LIB\Dev.Framework.Cache.dll
+		_LIB\Dev.Framework.Cache.Impl.dll = _LIB\Dev.Framework.Cache.Impl.dll
+		_LIB\Dev.Framework.FileServer.dll = _LIB\Dev.Framework.FileServer.dll
+		_LIB\Dev.Framework.FileServer.Impl.dll = _LIB\Dev.Framework.FileServer.Impl.dll
+		_LIB\Dev.Log.dll = _LIB\Dev.Log.dll
+		_LIB\Dev.Log.Impl.dll = _LIB\Dev.Log.Impl.dll
+		_LIB\Dev.Web.CompositionRootBase.dll = _LIB\Dev.Web.CompositionRootBase.dll
+		_LIB\Microsoft.Practices.ServiceLocation.dll = _LIB\Microsoft.Practices.ServiceLocation.dll
+		_LIB\TopSdk.dll = _LIB\TopSdk.dll
+		_LIB\Winista.HtmlParser.dll = _LIB\Winista.HtmlParser.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositionRoot", "CompositionRoots\CompositionRootBase\CompositionRoot.csproj", "{3EC4CDE1-853F-4BD0-8E53-176BF228AFA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositionRoot.Web", "CompositionRoots\CompositionRoot.Web\CompositionRoot.Web.csproj", "{6D789991-D137-497D-91CD-B5BB5DC6DF8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "业务中心", "业务中心", "{E968ABDA-4248-4929-8EA3-B15BB0F99E10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XX.Data", "BCenter\XX.Data\XX.Data.csproj", "{76137ECC-9C5C-4C85-999F-7932BA5A0F6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XX.Services", "BCenter\XX.Services\XX.Services.csproj", "{9B0B60F8-0CC3-4C89-B9A7-B51B09511477}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XX.Model", "BCenter\XX.Model\XX.Model.csproj", "{E44FFDEF-6107-4F39-AD09-2668C6B8FE9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XX.Web", "XX.Web\XX.Web.csproj", "{D4487E05-FF17-4756-8221-E1869F57B8C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C3AE08E7-7511-4A43-BB63-073FF1ED37FF}"
+	ProjectSection(SolutionItems) = preProject
+		使用说明.txt = 使用说明.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EC4CDE1-853F-4BD0-8E53-176BF228AFA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC4CDE1-853F-4BD0-8E53-176BF228AFA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC4CDE1-853F-4BD0-8E53-176BF228AFA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC4CDE1-853F-4BD0-8E53-176BF228AFA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D789991-D137-497D-91CD-B5BB5DC6DF8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D789991-D137-497D-91CD-B5BB5DC6DF8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D789991-D137-497D-91CD-B5BB5DC6DF8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D789991-D137-497D-91CD-B5BB5DC6DF8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76137ECC-9C5C-4C85-999F-7932BA5A0F6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76137ECC-9C5C-4C85-999F-7932BA5A0F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76137ECC-9C5C-4C85-999F-7932BA5A0F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76137ECC-9C5C-4C85-999F-7932BA5A0F6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B0B60F8-0CC3-4C89-B9A7-B51B09511477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B0B60F8-0CC3-4C89-B9A7-B51B09511477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B0B60F8-0CC3-4C89-B9A7-B51B09511477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B0B60F8-0CC3-4C89-B9A7-B51B09511477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E44FFDEF-6107-4F39-AD09-2668C6B8FE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E44FFDEF-6107-4F39-AD09-2668C6B8FE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E44FFDEF-6107-4F39-AD09-2668C6B8FE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E44FFDEF-6107-4F39-AD09-2668C6B8FE9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4487E05-FF17-4756-8221-E1869F57B8C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4487E05-FF17-4756-8221-E1869F57B8C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4487E05-FF17-4756-8221-E1869F57B8C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4487E05-FF17-4756-8221-E1869F57B8C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3EC4CDE1-853F-4BD0-8E53-176BF228AFA1} = {446631B1-9CC1-46F5-A207-F5B7C091A749}
+		{6D789991-D137-497D-91CD-B5BB5DC6DF8D} = {446631B1-9CC1-46F5-A207-F5B7C091A749}
+		{76137ECC-9C5C-4C85-999F-7932BA5A0F6F} = {E968ABDA-4248-4929-8EA3-B15BB0F99E10}
+		{9B0B60F8-0CC3-4C89-B9A7-B51B09511477} = {E968ABDA-4248-4929-8EA3-B15BB0F99E10}
+		{E44FFDEF-6107-4F39-AD09-2668C6B8FE9B} = {E968ABDA-4248-4929-8EA3-B15BB0F99E10}
+	EndGlobalSection
+EndGlobal

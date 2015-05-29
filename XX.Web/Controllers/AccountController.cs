@@ -15,10 +15,15 @@ namespace XX.Web.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+
+        //
         public AccountController()
             : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext())))
         {
         }
+
+
+
 
         public AccountController(UserManager<ApplicationUser> userManager)
         {
@@ -378,7 +383,8 @@ namespace XX.Web.Controllers
 
         private class ChallengeResult : HttpUnauthorizedResult
         {
-            public ChallengeResult(string provider, string redirectUri) : this(provider, redirectUri, null)
+            public ChallengeResult(string provider, string redirectUri)
+                : this(provider, redirectUri, null)
             {
             }
 
